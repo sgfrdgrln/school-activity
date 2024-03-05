@@ -28,3 +28,150 @@
 // setMonthlySalary(): void, getMonthlySalary(): double
 // PartTimeEmployee class should contain double ratePerHour, int hoursWorked, double wage, a getter and setter
 // method setWage(): void, getWage() : double
+
+import java.util.*; // for all util package
+
+public class RunEmployee {
+
+    public static void main(String[] args) {
+         
+       Employee e = new Employee(); // OBJECT
+       PartTimeEmployee p = new PartTimeEmployee(); // OBJECT
+       FullTimeEmployee f = new FullTimeEmployee(); // OBJECT
+
+
+       e.employeeInfo(); // first step and second step done
+       
+       // condition
+
+       if(e.typeOfWorker.equalsIgnoreCase("P")) {
+
+        System.out.println("part time");
+
+        p.partTimeInfo();
+
+        System.out.println("Employee name: "+e.name);
+        System.out.print("Wage: ");
+        System.out.printf("%.2f",p.getWage());
+
+       }
+       else if(e.typeOfWorker.equalsIgnoreCase("F")) {
+
+        System.out.println("full time\n");
+
+        f.fullTimeInfo();
+
+        System.out.println("Employee name: "+e.name); 
+        System.out.print("Monthly Salary: ");
+        System.out.printf("%.2f", f.getMonthlySalary());
+        
+
+       }
+
+
+    }
+
+
+}
+class Employee { // Superclass 
+
+ Scanner scanner = new Scanner(System.in);
+
+ String name;
+
+ String typeOfWorker; // u can also use char
+ 
+ // Setter
+
+ public void setName(String employeeName) {
+
+   this.name = employeeName;
+
+ }
+ 
+ // Getter
+
+   public String getName() {
+
+   return name;
+
+   }
+   
+   public void employeeInfo() {
+
+    System.out.print("Enter your name: ");
+    name = scanner.nextLine();
+    System.out.print("Press P if part-time, F if full-time: ");
+    typeOfWorker = scanner.nextLine();
+
+   }
+
+
+}
+class PartTimeEmployee extends Employee { // Subclass
+
+    double ratePerHour, wage;
+    int hoursWorked;
+
+    // Setter
+
+    public void setWage(double rate, int hours) {
+
+     this.ratePerHour = rate;
+     this.hoursWorked = hours;
+     
+    }
+ 
+    // Getter
+
+     public double getWage() {
+
+      wage = ratePerHour * hoursWorked; // MULTIPLY 
+
+      return wage; // return the final value
+
+     }
+
+     public void partTimeInfo() {
+
+        System.out.print("Enter your rate and enter how many hours you've worked: ");
+        ratePerHour = scanner.nextDouble(); // USER INPUT 
+        hoursWorked = scanner.nextInt(); // USER INPUT
+         
+        setWage(ratePerHour, hoursWorked); // STORE OR SET THE DATA
+      
+      
+      }
+
+
+}
+class FullTimeEmployee extends Employee { // Subclass
+
+double monthlySalary;
+
+// Getter 
+
+public double getMonthlySalary() {
+
+ return monthlySalary;
+}
+
+// Setter 
+
+public void setMonthlySalary(double ms) {
+
+    this.monthlySalary = ms;
+
+}
+public void fullTimeInfo() {
+
+  System.out.print("Enter your monthly salary: ");
+  monthlySalary = scanner.nextDouble(); // USER INPUT
+ 
+  setMonthlySalary(monthlySalary); // STORE OR SET THE DATA
+
+
+}
+
+
+}
