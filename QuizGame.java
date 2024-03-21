@@ -14,16 +14,8 @@ public class QuizGame
     
 	public static void main(String[] args) {
 	    
-	
-	
-	
-
-	
 	String userInput;
-	
-
 	boolean isValid;
-	
 	
 	questions.add("|  1. What is the capital of the Philippines?\t    |\n|     A. Manila\t\t\t\t\t    |\n|     B. Bangkok\t\t\t\t    |\n|     C. Singapore\t\t\t\t    |");
 	questions.add("|  2. What is the capital of the Thailand?\t    |\n|     A. Manila\t\t\t\t\t    |\n|     B. Bangkok\t\t\t\t    |\n|     C. Singapore\t\t\t\t    |");
@@ -67,9 +59,7 @@ public class QuizGame
 	}
 	}
 	
-	
     allQuestionsAnswered = true;
-	
 	
 	}
 
@@ -100,10 +90,7 @@ public class QuizGame
 	    if(userAnswer[5] == null) {
 	        
 	        userAnswer[5] = "";
-	    }
-	    
-	    
-	    
+	    }    
 	    
 	if(userAnswer[0].equalsIgnoreCase(answers[0])) {
 	    score++;
