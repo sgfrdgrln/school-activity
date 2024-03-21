@@ -3,17 +3,13 @@ import java.io.*;
 
 class BlankInputException extends Exception {
     public BlankInputException(String error) {
-
         super(error);
-
     }
 }
 
 class InvalidInputException extends Exception {
     public InvalidInputException(String error) {
-
         super(error);
-
     }
 }
 
@@ -35,12 +31,8 @@ public class Quiz {
     String[] answers = {"C", "B", "C", "C", "A", "A", "B", "C", "C", "A"};
 
 public static void main(String[] args) {
-
     Quiz quiz = new Quiz();
-
     Scanner sc = new Scanner(System.in);
-    
-    
     int score = 0;
     boolean validator = false;
     int numOfGuess = 0;
@@ -50,60 +42,38 @@ public static void main(String[] args) {
     System.out.println("\t\tQuiz Game\n");
 
     for(int i = 0; i < quiz.questions.length; i++) {
-
         validator = false;
 
         System.out.println(quiz.questions[i]);
 
         while (!validator) {
-            
             try {
             System.out.print("Enter a letter (A, B, or C) only: ");
             guess = sc.nextLine();
-
             if(guess.equalsIgnoreCase("")) {
                 throw new BlankInputException("You did not input anything.");
             }
             else if(!guess.equalsIgnoreCase("A") && !guess.equalsIgnoreCase("B") && !guess.equalsIgnoreCase("C") ) {
-
                 throw new InvalidInputException("Invalid input. Please enter (A, B, or C) only.");
             }
             else {
                 validator = true;
                 userAnswer[i] = guess.toUpperCase(); 
-
             }
             }
             catch(BlankInputException e) {
-
                 System.out.println(e.getMessage());
-                
-
             }
             catch(InvalidInputException e) {
-                System.out.println(e.getMessage());
-                
-            }
-            
+                System.out.println(e.getMessage());   
+            }   
         }
-
-        
-
     }
-
     for (int i = 0; i < quiz.questions.length; i++) {
-        
        if (userAnswer[i].equalsIgnoreCase(quiz.answers[i])) {
-           
            score++;
-       }
-        
-        
+       }   
     }
-    
-    
     System.out.println("You scored: "+score+"/"+quiz.questions.length);
-
 }
-
 }
