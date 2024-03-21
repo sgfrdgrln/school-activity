@@ -4,7 +4,7 @@ import java.io.*;
 public class QuizGame
 {
     static Scanner sc = new Scanner(System.in);
-    static int timer = 20;
+    static int timer = 30;
     static int timeRemaining = timer;
     static String[] userAnswer = new String[6];
     static String[] answers = {"A", "B", "C", "A", "B", "C"};
@@ -16,7 +16,6 @@ public class QuizGame
 	    
 	String userInput;
 	boolean isValid;
-	
 	questions.add("|  1. What is the capital of the Philippines?\t    |\n|     A. Manila\t\t\t\t\t    |\n|     B. Bangkok\t\t\t\t    |\n|     C. Singapore\t\t\t\t    |");
 	questions.add("|  2. What is the capital of the Thailand?\t    |\n|     A. Manila\t\t\t\t\t    |\n|     B. Bangkok\t\t\t\t    |\n|     C. Singapore\t\t\t\t    |");
 	questions.add("|  3. What is the capital of the Singapore?\t    |\n|     A. Manila\t\t\t\t\t    |\n|     B. Bangkok\t\t\t\t    |\n|     C. Singapore\t\t\t\t    |");
@@ -64,9 +63,7 @@ public class QuizGame
 	}
 
 	public static void checkAnswers() {
-	    
-	   
-	    
+	       
 	    if(userAnswer[0] == null) {
 	        
 	        userAnswer[0] = "";
