@@ -78,7 +78,7 @@ public class Hangman {
 
     public static void main(String[] args) {
         Hangman hangmanGame = new Hangman();
-        System.out.println("--- Hangman ---\nPlease enter only lowercase letters to avoid losing tries.");
+        System.out.println("--- Hangman ---\nGoal: Guess the word before you run out of tries.\nPlease enter only lowercase letters to avoid losing tries.\n");
         hangmanGame.startGame();
     }
 }
