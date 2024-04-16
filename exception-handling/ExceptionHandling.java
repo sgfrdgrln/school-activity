@@ -26,7 +26,7 @@ public class ExceptionHandling {
                 String[] name = new String[1];
 
                 
-                
+                // since you made an array with only index 0, you cannot initialize a value on index 1
                 name[1] = "Bobby"; 
             }catch(ArrayIndexOutOfBoundsException arrayIndexError) {
                 errorCounter++;
@@ -35,7 +35,8 @@ public class ExceptionHandling {
                 System.out.println(arrayIndexError);
 
                 try{
-                    String animal = "Cat";
+                    String animal = "Cat"; 
+                    // since Cat has only 2 index it cannot print the index 3 
                     System.out.println(animal.charAt(3));
                 }catch(StringIndexOutOfBoundsException stringIndexError) {
                     errorCounter++;
@@ -44,6 +45,7 @@ public class ExceptionHandling {
                     System.out.println(stringIndexError);
 
                     try{
+                        // you cannot convert a word to an integer. only numbers ex: "123".
                         Integer.parseInt("banana");
                     }catch(NumberFormatException numberFormatError) {
                         errorCounter++;
@@ -52,7 +54,9 @@ public class ExceptionHandling {
                         System.out.println(numberFormatError);
 
                         try {
+                            
                             Object[] stringArray = new String[2];
+                            // you cannot store an integer to a String array.
                             stringArray[1] = 123;
 
                         }catch(ArrayStoreException arrayStoreError) {
@@ -62,6 +66,8 @@ public class ExceptionHandling {
                             System.out.println(arrayStoreError);
 
                             try {
+
+                                // you cannot divide a number by 0
                                 System.out.println(13 / 0);
 
                             }catch(ArithmeticException mathError) {
@@ -72,7 +78,7 @@ public class ExceptionHandling {
 
                                 try {
                                     String value = null;
-
+                                    // you are trying a get the length of a variable which is null?
                                     System.out.println(value.length());
 
                                 }catch(NullPointerException nullError) {
