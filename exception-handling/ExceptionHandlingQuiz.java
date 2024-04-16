@@ -80,7 +80,9 @@ public class ExceptionHandlingQuiz {
             System.out.println("\nERROR");
             System.out.println("You tried to enter a String or decimal to an integer scanner?");
             System.out.println(inputError);
+            input.nextLine();
             arrayChecker();
+          
         }
     }
     private static void arrayChecker() {
@@ -112,6 +114,7 @@ public class ExceptionHandlingQuiz {
             System.out.println("\nERROR");
             System.out.println("You tried to enter a String or decimal to an integer scanner?");
             System.out.println(inputError);
+            input.nextLine();
             arrayStoreChecker();
         }
     }
@@ -162,6 +165,7 @@ public class ExceptionHandlingQuiz {
             System.out.println("You tried to enter a String or decimal to an integer scanner?");
             System.out.println(inputError);
             validator = false;
+            input.nextLine();
             stringIndexChecker();
         }
 
@@ -189,6 +193,14 @@ public class ExceptionHandlingQuiz {
             System.out.println(stringIndexError);
             numberFormatChecker();
         }
+        catch(InputMismatchException inputError) {
+            errorCounter++;
+            System.out.println("\nERROR");
+            System.out.println("You tried to enter a String or decimal to an integer scanner?");
+            System.out.println(inputError);
+            numberFormatChecker();
+        }
+        
     }
     private static void numberFormatChecker() {
         input.nextLine();
@@ -213,6 +225,8 @@ public class ExceptionHandlingQuiz {
             
             nullPointerChecker();
         }
+        
+        
 
     }
     private static void nullPointerChecker() {
