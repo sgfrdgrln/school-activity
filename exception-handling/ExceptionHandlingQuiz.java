@@ -139,6 +139,7 @@ public class ExceptionHandlingQuiz {
                 stringIndexChecker();
             }
             else if(answer == 2){
+                System.out.println("Wrong!");
                 validator = false;
                 stringArray[0] = 123;
                 
