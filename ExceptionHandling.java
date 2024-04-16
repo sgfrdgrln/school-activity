@@ -50,7 +50,7 @@ public class ExceptionHandling {
                     }catch(NumberFormatException numberFormatError) {
                         errorCounter++;
                         System.out.println("\nERROR 4 for NumberFormatException:");
-                        System.out.println("cannot convert a word to integer only numbers.");
+                        System.out.println("cannot convert a word to integer, only numbers.");
                         System.out.println(numberFormatError);
 
                         try {
