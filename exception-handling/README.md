@@ -10,7 +10,7 @@ IllegalAccessException - Access to class is denied.
 InstantiationException - Attempt to create an object of an abstract class or an interface.
 NoSuchMethodException - A requested method does not exist.
 
-Unchecked exceeptions (sub class) - are exceptions that occur during execution. These are also known as runtime exceptions (super class of unchecked exceptions).
+Unchecked exceptions (sub class) - are exceptions that occur during execution. These are also known as runtime exceptions (super class of unchecked exceptions).
 
 UNCHECKED EXCEPTIONS
 ArithmeticException - occurs when an integer is divided by 0.
