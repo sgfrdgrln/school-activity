@@ -261,12 +261,35 @@ public class ExceptionHandlingQuiz {
     System.out.println("\nGame finished!");
     System.out.println("\nExceptions occured: "+errorCounter);
 
+    try {
     if(errorCounter == 0) {
-        System.out.println("\nWow! You got zero error. Good job!");
+        throw new NoErrorException("Wow! You got zero error. Good job!");
     }
+    else {
+        throw new CustomException();
+    }
+}
+catch(CustomException customException) {
+    System.out.println(customException.getMessage());
+}
+catch(NoErrorException noErrorException) {
+    System.out.println(noErrorException.getMessage());
+}
     System.out.println("Program stopped.");
     }
 
     
 
+}
+class CustomException extends Exception {
+
+    public CustomException() {
+        super("This is a custom exception!");
+    }
+}
+class NoErrorException extends Exception {
+
+    public NoErrorException(String message) {
+        super(message);
+    }
 }
