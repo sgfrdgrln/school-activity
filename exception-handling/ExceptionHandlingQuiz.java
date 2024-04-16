@@ -265,16 +265,22 @@ public class ExceptionHandlingQuiz {
     if(errorCounter == 0) {
         throw new NoErrorException("Wow! You got zero error. Good job!");
     }
+    else if(errorCounter == 7) {
+        throw new CatchingErrorsException();
+    }
     else {
         throw new CustomException();
     }
 }
-catch(CustomException customException) {
+    catch(CustomException customException) {
     System.out.println(customException.getMessage());
-}
-catch(NoErrorException noErrorException) {
+    }
+    catch(NoErrorException noErrorException) {
     System.out.println(noErrorException.getMessage());
-}
+    }
+    catch(CatchingErrorsException catchingErrorsException) {
+    System.out.println(catchingErrorsException.getMessage());
+    }
     System.out.println("Program stopped.");
     }
 
@@ -291,5 +297,11 @@ class NoErrorException extends Exception {
 
     public NoErrorException(String message) {
         super(message);
+    }
+}
+class CatchingErrorsException extends Exception{
+    
+    public CatchingErrorsException() {
+        super("You like catching all the errors, huh?");
     }
 }
