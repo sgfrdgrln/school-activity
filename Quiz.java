@@ -1,5 +1,4 @@
 import java.util.*;
-import java.io.*;
 
 class BlankInputException extends Exception {
     public BlankInputException(String error) {
@@ -32,10 +31,10 @@ public class Quiz {
 
 public static void main(String[] args) {
     Quiz quiz = new Quiz();
+    @SuppressWarnings("resource")
     Scanner sc = new Scanner(System.in);
     int score = 0;
     boolean validator = false;
-    int numOfGuess = 0;
     String guess;
     String[] userAnswer = new String[10];
 
