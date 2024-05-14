@@ -31,6 +31,12 @@ class Character {
 
     }
 
+
+    public static boolean isLetter(char charAt) {
+        // TODO Auto-generated method stub
+        throw new UnsupportedOperationException("Unimplemented method 'isLetter'");
+    }
+
 }
 
 enum CharacterClass {
