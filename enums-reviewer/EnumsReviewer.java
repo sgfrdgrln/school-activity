@@ -27,6 +27,7 @@ public class EnumsReviewer {
                 System.out.println(level);
             }
             // Get user input and convert to uppercase
+            System.out.print("Your input here: ");
             String input = scanner.nextLine().toUpperCase();
             try {
                 // Convert input to GradeLevel enum value
@@ -52,6 +53,7 @@ public class EnumsReviewer {
                 System.out.println(c);
             }
             // Get user input and convert to uppercase
+            System.out.print("Your input here: ");
             String input = scanner.nextLine().toUpperCase();
             try {
                 // Convert input to Course enum value
@@ -73,6 +75,7 @@ public class EnumsReviewer {
             // Prompt user to enter section
             System.out.print("Enter your section: ");
             // Get user input for section
+            System.out.print("Your input here: ");
             section = scanner.nextLine();
         } while (section.equals("")); // Continue loop until section is not empty
         return section;
