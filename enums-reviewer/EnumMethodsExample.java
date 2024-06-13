@@ -1,4 +1,6 @@
 public class EnumMethodsExample {
+
+    // pre-final
     public static void main(String[] args) {
 
         Color color1 = Color.RED;
