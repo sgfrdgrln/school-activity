@@ -2,4 +2,7 @@
 
 <h2>Setup</h2>
 Input on your Git Bash Terminal:
+```
 git clone https://github.com/sgfrdgrln/java-school-activity.git
+```
+```
