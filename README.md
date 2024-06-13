@@ -8,4 +8,4 @@ input on your git bash terminal:
 git clone https://github.com/sgfrdgrln/java-school-activity.git
 ```
 
-<h3>Please give this repository a star if you found it helpful 😊</h3>
+<h3>Please give this repository a star, if it was helpful 😊</h3>
