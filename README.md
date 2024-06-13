@@ -7,4 +7,3 @@ input on your git bash terminal:
 ```
 git clone https://github.com/sgfrdgrln/java-school-activity.git
 ```
-```
