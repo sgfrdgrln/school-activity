@@ -5,7 +5,7 @@
 input on your git bash terminal:
 
 ```
-git clone https://github.com/sgfrdgrln/java-school-activity.git
+git clone https://github.com/sgfrdgrln/school-activity.git
 ```
 
 <h3>Please give this repository a star, if it was helpful 😊</h3>
