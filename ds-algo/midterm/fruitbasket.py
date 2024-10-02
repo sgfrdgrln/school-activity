@@ -27,5 +27,5 @@ while basket:
         if len(basket) > 0:
             print("Fruit(s) in the basket: " + str(basket))
         else:
-            print("No more fruits")
+            print("No more fruits.")
 
