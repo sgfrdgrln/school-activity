@@ -1,6 +1,6 @@
 import java.util.*;
 
-// this program is mainly used for my data structure and algorithm activity, no copyright infrigmement intended :))
+// this program is mainly used for my data structure and algorithm activity, no copyright infringmement intended :))
 
 public class Jollibee {
 
