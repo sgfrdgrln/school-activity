@@ -1,6 +1,7 @@
 import java.util.*;
 
-// this program is mainly used for my data structure and algorithm activity, no copyright infringmement intended :))
+// The usage of the brand named Jollibee and its menu in this program is mainly used for my data structures and algorithms activity 
+// I only used it as an example for the ordering system I made, no copyright infringmement intended :))
 
 public class Jollibee {
 
