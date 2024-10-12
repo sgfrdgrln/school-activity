@@ -1,4 +1,4 @@
-package oop.midterm;
+package midterm;
 
 import java.util.Scanner;
 
